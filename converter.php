@@ -4,7 +4,7 @@
 	$metrico = strip_tags($_POST["metrico"]);
 	$medidaM = strip_tags($_POST["medidaM"]);
 
-	if (is_numeric($metrico)) {
+	if ((is_numeric($metrico) && $metrico >=0) || (is_numeric($metrico) && $medidaM == 'c')) {
 
 		switch ($medidaM){
 			case 'ml':
